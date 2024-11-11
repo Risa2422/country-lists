@@ -1,5 +1,6 @@
+import { Moon } from "lucide-react";
 import React from "react";
-import { Moon } from "react-feather";
+import DarkMode from "./DarkMode";
 
 export default function Header() {
   return (
@@ -8,10 +9,9 @@ export default function Header() {
         Where in the world?
       </h1>
       <div className="flex gap-2">
-        <div className="logo">
-          <Moon />
+        <div className="flex justify-center items-center">
+          <DarkMode />
         </div>
-        <p className="text-xl font-semibold">Dark Mode</p>
       </div>
     </header>
   );
