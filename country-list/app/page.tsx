@@ -1,3 +1,4 @@
+import CountryList from "@/components/ui/CountryList";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -11,7 +12,7 @@ import { Search } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-5 sm:p-12">
+    <div className="min-h-screen p-5 sm:p-11">
       <div className="flex justify-between w-full">
         <div className="relative w-full max-w-md">
           <Input
@@ -21,23 +22,22 @@ export default function Home() {
           />
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
         </div>
-        <div>
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Filter by Region" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectItem value="africa">Africa</SelectItem>
-                <SelectItem value="america">America</SelectItem>
-                <SelectItem value="asia">Asia</SelectItem>
-                <SelectItem value="europe">Europe</SelectItem>
-                <SelectItem value="oceania">Oceania</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
+        <Select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Filter by Region" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="africa">Africa</SelectItem>
+              <SelectItem value="america">America</SelectItem>
+              <SelectItem value="asia">Asia</SelectItem>
+              <SelectItem value="europe">Europe</SelectItem>
+              <SelectItem value="oceania">Oceania</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       </div>
+        <CountryList />
     </div>
   );
 }
